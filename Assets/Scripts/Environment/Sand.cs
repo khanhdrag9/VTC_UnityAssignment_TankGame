@@ -14,4 +14,13 @@ public class Sand : MonoBehaviour
             moveObj.scale = speedScaleOn;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        var moveObj = collision.GetComponent<Movement>();
+        if (moveObj)
+        {
+            moveObj.scale = 1;
+        }
+    }
 }

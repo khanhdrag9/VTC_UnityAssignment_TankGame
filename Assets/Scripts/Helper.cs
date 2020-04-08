@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Helper
+public static class Helper
 {
     public static float Angle90(Vector2 direction)
     {
@@ -23,5 +23,11 @@ public class Helper
         angle = Mathf.Atan2(offset.y, offset.x) * Mathf.Rad2Deg;
 
         return angle;
+    }
+
+    public static Color SetAlpha(this Color color, float value)
+    {
+        color.a = value;
+        return color;
     }
 }

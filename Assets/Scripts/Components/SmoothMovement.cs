@@ -10,8 +10,6 @@ public class SmoothMovement : Movement
         newpos = Controller.ClampPosition(newpos, false, Vector2.one);
         //transform.position = Vector2.Lerp(transform.position, newpos, 0.3f);
         transform.position = newpos;
-
-        scale = 1;
     }
 
     void Update()
