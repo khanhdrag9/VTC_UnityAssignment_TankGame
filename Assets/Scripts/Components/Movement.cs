@@ -4,6 +4,9 @@ using UnityEngine;
 
 public abstract class Movement : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] private float speed;
+    public float Speed => speed * scale;
+    [HideInInspector] public float scale = 1;
+
     public abstract void Handle(Vector2 direction, float speedScale);
 }
