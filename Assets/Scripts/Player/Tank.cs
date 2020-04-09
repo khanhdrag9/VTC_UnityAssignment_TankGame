@@ -6,6 +6,7 @@ public abstract class Tank : MonoBehaviour
 {
     protected Movement movement;
     protected Rotation rotation;
+    protected Rotation barrelRotation;
     protected ShootObject shootObject;
 
     protected virtual void Awake()
@@ -17,6 +18,7 @@ public abstract class Tank : MonoBehaviour
     {
         movement = GetComponent<Movement>();
         rotation = GetComponent<Rotation>();
+        barrelRotation = transform.Find("Barrel").GetComponent<Rotation>();
         shootObject = GetComponent<ShootObject>();
     }
 

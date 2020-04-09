@@ -14,7 +14,7 @@ public class Player : Tank
 
     protected override void UpdateMine()
     {
-        rotation?.Handle(controlAbleObject.mouseDirect, 1);
+        barrelRotation?.Handle(controlAbleObject.mouseDirect, 1);
 
         if (Input.GetMouseButtonDown(0))
         {

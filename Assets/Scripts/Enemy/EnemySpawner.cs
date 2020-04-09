@@ -22,10 +22,12 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator IE_Spawn(EnemyPattern pattern)
     {
+        var enemyTarget = FindObjectOfType<Player>(); 
         int number = pattern.objectAvailable.GetRandomAsInt();
         for (int i = 0; i < number; i++)
         {
             Enemy e = Instantiate(enemyPrefab);
+            e.target = enemyTarget.transform;
             pattern.AddEnemy(e, 0);
             yield return new WaitForSeconds(pattern.delayAvailable);
         }

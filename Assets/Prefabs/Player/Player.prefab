@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2142007020}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,12 +23,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142007019}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.573, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.558, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7857087467660604172}
-  m_RootOrder: 1
+  m_Father: {fileID: 7857087467060498500}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7857087467060498501
 GameObject:
@@ -40,7 +40,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7857087467060498500}
   - component: {fileID: 7857087467060498507}
-  m_Layer: 10
+  - component: {fileID: 6731562355091210075}
+  m_Layer: 13
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,9 +56,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7857087467060498501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.365, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2142007020}
   m_Father: {fileID: 7857087467660604172}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -111,6 +113,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6731562355091210075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7857087467060498501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca7ddfd96e56434f8a2f066bb834809, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7857087467660604174
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,16 +136,16 @@ GameObject:
   - component: {fileID: 7857087467660604172}
   - component: {fileID: 7857087467660604173}
   - component: {fileID: 7857087467660604211}
-  - component: {fileID: 7857087467660604210}
+  - component: {fileID: 2274836331858984746}
   - component: {fileID: 7857087467660604209}
   - component: {fileID: 7857087467660604208}
   - component: {fileID: 7857087467660604215}
   - component: {fileID: 7740114873251907778}
   - component: {fileID: 1116906271}
   - component: {fileID: 1116906270}
-  m_Layer: 10
+  m_Layer: 13
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,7 +162,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7857087467060498500}
-  - {fileID: 2142007020}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -214,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fa87a8a90f76d4d8aef8a18ad06ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7857087467660604210
+--- !u!114 &2274836331858984746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,11 +236,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7857087467660604174}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba9e6f11fcc4fe140b6a2614c9c051b1, type: 3}
+  m_Script: {fileID: 11500000, guid: be0ab46528772f9439a6b4d4a6b9f786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   scale: 1
+  speedRotation: 0.15
 --- !u!114 &7857087467660604209
 MonoBehaviour:
   m_ObjectHideFlags: 0
