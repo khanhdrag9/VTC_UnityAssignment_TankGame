@@ -2,27 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Tank
 {
     private ControlAbleObject controlAbleObject;
-    private Movement movement;
-    private Rotation rotation;
-    private ShootObject shootObject;
 
-    void Start()
+    public override void ReUpdateComponents()
     {
-        ReUpdateComponents();
-    }
-
-    public void ReUpdateComponents()
-    {
+        base.ReUpdateComponents();
         controlAbleObject = GetComponent<ControlAbleObject>();
-        movement = GetComponent<Movement>();
-        rotation = GetComponent<Rotation>();
-        shootObject = GetComponent<ShootObject>();
     }
 
-    private void UpdateMine()
+    protected override void UpdateMine()
     {
         rotation?.Handle(controlAbleObject.mouseDirect, 1);
 
@@ -32,18 +22,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void FixedUpdateMine()
+    protected override void FixedUpdateMine()
     {
         movement?.Handle(controlAbleObject.direct, 1);
-    }
-
-    void Update()
-    {
-        UpdateMine();
-    }
-
-    private void FixedUpdate()
-    {
-        FixedUpdateMine();
     }
 }
