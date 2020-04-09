@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2142007020}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShootPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7857087467060498500}
   - component: {fileID: 7857087467060498507}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 7740114873251907778}
   - component: {fileID: 1116906271}
   - component: {fileID: 1116906270}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ca23507eeaa7fe4eab0160e9385775e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 533476607798811704, guid: bc59566ddacd17040b9569d0934fedc8,
+  bulletPrefab: {fileID: 533476607798811704, guid: 7426f38ed31f4b34aa7f4370529dfdc7,
     type: 3}
   interval: 0.1
   shootPoint: {fileID: 2142007020}

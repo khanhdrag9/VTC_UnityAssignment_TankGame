@@ -8,7 +8,7 @@ public class Bush : MonoBehaviour
     //private void OnTriggerEnter2D(Collider2D collision)
     {
         var o = collision.GetComponent<OpacityChanger>();
-        o?.SetAlpha(0);
+        o?.SetAlpha(0.2f);
     }
 
     private void OnTriggerExit2D(Collider2D collision)
