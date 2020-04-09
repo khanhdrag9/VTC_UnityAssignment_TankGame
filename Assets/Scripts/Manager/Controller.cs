@@ -63,7 +63,10 @@ public class Controller : MonoBehaviour
         position = ClampPosition(position, true, Vector2.zero);
         position.z = -10;
 
-        transform.position = Vector3.Lerp(transform.position, position, 0.2f);
+        //transform.position = Vector3.Lerp(transform.position, position, 0.2f);
+
+        Vector3 velocity = Vector3.zero;
+        transform.position = Vector3.SmoothDamp(transform.position, position, ref velocity, 0.075f);
     }
 
     public static Vector2 ClampPosition(Vector2 position, bool inBGView, Vector2 margin)

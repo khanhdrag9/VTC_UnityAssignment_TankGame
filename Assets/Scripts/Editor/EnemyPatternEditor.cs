@@ -59,6 +59,7 @@ public class EnemyPatternEditor : Editor
 
         GUI.color = Color.white;
         this.DrawElements();
+
     }
     private void DrawElements()
     {
@@ -110,6 +111,10 @@ public class EnemyPatternEditor : Editor
         {
             listProperty.InsertArrayElementAtIndex(Mathf.Max(0, listProperty.arraySize - 1));
         }
+
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("objectAvailable"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("startLoop"));
+        EditorGUILayout.PropertyField(serializedObject.FindProperty("delayAvailable"));
 
         serializedObject.ApplyModifiedProperties();
     }

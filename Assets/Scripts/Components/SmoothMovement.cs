@@ -12,6 +12,16 @@ public class SmoothMovement : Movement
         transform.position = newpos;
     }
 
+    public override bool HandleWithTarget(Vector2 target, float speedScale)
+    {
+        Vector2 newpos = Vector2.MoveTowards(transform.position, target, Speed * speedScale * Time.fixedDeltaTime);
+
+        bool reachTarget = (newpos - target).magnitude <= 0.05f;
+        newpos = Controller.ClampPosition(newpos, false, Vector2.one);
+        transform.position = newpos;
+        return reachTarget;
+    }
+
     void Update()
     {
         

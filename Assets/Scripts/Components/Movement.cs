@@ -9,4 +9,5 @@ public abstract class Movement : MonoBehaviour
     [HideInInspector] public float scale = 1;
 
     public abstract void Handle(Vector2 direction, float speedScale);
+    public abstract bool HandleWithTarget(Vector2 target, float speedScale);
 }

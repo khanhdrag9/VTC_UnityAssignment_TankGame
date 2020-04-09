@@ -8,7 +8,7 @@ public abstract class Tank : MonoBehaviour
     protected Rotation rotation;
     protected ShootObject shootObject;
 
-    protected virtual void Start()
+    protected virtual void Awake()
     {
         ReUpdateComponents();
     }
