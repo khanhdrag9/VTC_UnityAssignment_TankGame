@@ -26,18 +26,12 @@ public class EnemySpawner : MonoBehaviour
 
         progress.Setup(totalWaves);
 
-        currentPatternIndex = -1;
+        currentPatternIndex = 0;
         Invoke("Spawn", delayEachWaves);
     }
 
     public void Spawn()
     {
-        if(++currentPatternIndex >= patterns.Length)
-        {
-            Debug.Log("victory");
-            return;
-        }
-
         currentPattern = patterns[currentPatternIndex];
         StartCoroutine(IE_Spawn(currentPattern));
     }
@@ -46,8 +40,10 @@ public class EnemySpawner : MonoBehaviour
     {
         var enemyTarget = FindObjectOfType<Player>();
         int number = pattern.objectAvailable;
+        pattern.countKilled = 0;
         for (int i = 0; i < number; i++)
         {
+            if (enemyTarget == null) continue;
             Enemy e = Instantiate(enemyPrefab);
             e.target = enemyTarget.transform;
             pattern.AddEnemy(e, 0);
@@ -58,7 +54,18 @@ public class EnemySpawner : MonoBehaviour
     {
         if(currentPattern != null && currentPattern.isDone)
         {
+            currentPattern = null;
+            if (++currentPatternIndex >= patterns.Length)
+            {
+                Invoke("Victory", delayEachWaves);
+                return;
+            }
             Invoke("Spawn", delayEachWaves);
         }
+    }
+
+    public void Victory()
+    {
+        FindObjectOfType<Controller>()?.ActiveVictory();
     }
 }

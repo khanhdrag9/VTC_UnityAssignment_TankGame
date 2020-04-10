@@ -98,3 +98,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   tilemap: {fileID: 0}
+  victory: {fileID: 0}
+  defeat: {fileID: 0}

@@ -9,10 +9,10 @@ public class EnemyPattern : MonoBehaviour
     public float delayAvailable;
     public int objectAvailable;
 
-    public bool isDone => enemies != null && enemies.Count == 0;
+    public bool isDone => enemies != null && countKilled >= objectAvailable;
     public ProgressBar progress { get; set; }
-
-    private List<EnemyHandle> enemies;
+    public List<EnemyHandle> enemies { get; set; }
+    public int countKilled { get; set; }
 
     public void AddEnemy(Enemy enemy, int startIndex)
     {
@@ -21,7 +21,7 @@ public class EnemyPattern : MonoBehaviour
             enemies = new List<EnemyHandle>();
         }
 
-        var exist = enemies.Find(e => e.enemy.gameObject == enemy.gameObject);
+        var exist = enemies.Find(e => e.enemy != null && e.enemy.gameObject == enemy.gameObject);
         if (exist != null)
             exist.indexMovement = startIndex;
         else
@@ -48,6 +48,7 @@ public class EnemyPattern : MonoBehaviour
             {
                 enemies.RemoveAt(i);
                 progress?.Increase();
+                countKilled++;
                 continue;
             }
 
@@ -60,7 +61,7 @@ public class EnemyPattern : MonoBehaviour
         }
     }
 
-    private class EnemyHandle
+    public class EnemyHandle
     {
         public Enemy enemy;
         public int indexMovement;

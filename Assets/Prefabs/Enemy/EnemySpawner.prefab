@@ -45,5 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7888399140795037883, guid: b8a6005bfb9defd49aab3c95d1d64430,
     type: 3}
-  patterns: []
+  patterns:
+  - {fileID: 0}
+  - {fileID: 0}
   delayEachWaves: 3
+  victory: {fileID: 0}

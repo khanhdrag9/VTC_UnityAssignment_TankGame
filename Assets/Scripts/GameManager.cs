@@ -3,8 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum GameMode
+{
+    SINGLE, MULTI
+}
+
 public class GameManager : Singleton<GameManager>
 {
+    public int numberStages;
+
+    public GameMode gamemode { get; set; }
+
 
     protected override void Awake()
     {
@@ -22,14 +31,13 @@ public class GameManager : Singleton<GameManager>
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.buildIndex == 1)
+        if (scene.buildIndex == 0)
         {
 
         }
-        else if (scene.buildIndex == 0)
+        else
         {
 
         }
-
     }
 }

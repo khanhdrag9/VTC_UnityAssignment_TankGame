@@ -8,6 +8,8 @@ public class Controller : MonoBehaviour
 {
     public ControlAbleObject target;
     public Tilemap tilemap;
+    public GameObject victory;
+    public GameObject defeat;
 
     private Camera cam;
 
@@ -16,6 +18,14 @@ public class Controller : MonoBehaviour
     
     public static float clampXCam;
     public static float clampYCam;
+
+    private void Awake()
+    {
+#if UNITY_EDITOR
+        if (GameManager.Instance == null)
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+#endif
+    }
 
     private void Start()
     {
@@ -80,5 +90,21 @@ public class Controller : MonoBehaviour
         position.y = Mathf.Clamp(position.y, -cy, cy);
 
         return position;
+    }
+
+    public void ActiveVictory()
+    {
+        if (victory == null || defeat == null) return;
+
+        if (!defeat.activeSelf)
+            victory.SetActive(true);
+    }
+
+    public void ActiveDefeat()
+    {
+        if (victory == null || defeat == null) return;
+
+        if (!victory.activeSelf)
+            defeat.SetActive(true);
     }
 }

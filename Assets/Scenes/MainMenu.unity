@@ -238,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4cab7c18c0d17545888719659c57a0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberStages: 2
 --- !u!1 &57742678
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,4 +1670,3 @@ MonoBehaviour:
   stageUIGroup: {fileID: 1228476405}
   stageUIPrefab: {fileID: 1211606975492147960, guid: 810f059d63e27b346871569e5b6f31d5,
     type: 3}
-  numberStages: 2

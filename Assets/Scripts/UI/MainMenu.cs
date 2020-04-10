@@ -17,12 +17,12 @@ public class MainMenu : MonoBehaviour
 
     public void EnterSingleplay()
     {
-
+        GameManager.Instance.gamemode = GameMode.SINGLE;
     }
 
     public void EnterMultiplay()
     {
-
+        GameManager.Instance.gamemode = GameMode.MULTI;
     }
 
     public void SelectStage(int index)

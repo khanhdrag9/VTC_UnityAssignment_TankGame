@@ -26,4 +26,9 @@ public class Player : Tank
     {
         movement?.Handle(controlAbleObject.direct, 1);
     }
+
+    private void OnDestroy()
+    {
+        FindObjectOfType<Controller>()?.ActiveDefeat();
+    }
 }

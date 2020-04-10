@@ -7,14 +7,13 @@ public class StageSelection : MonoBehaviour
 {
     public Transform stageUIGroup;
     public GameObject stageUIPrefab;
-    public int numberStages;
 
     private MainMenu mainMenu;
 
     void Start()
     {
         mainMenu = FindObjectOfType<MainMenu>();
-        for (int i = 0; i < numberStages; i++)
+        for (int i = 0; i < GameManager.Instance.numberStages; i++)
         {
             var o = Instantiate(stageUIPrefab, stageUIGroup).GetComponent<Button>();
             o.onClick.AddListener(() =>
