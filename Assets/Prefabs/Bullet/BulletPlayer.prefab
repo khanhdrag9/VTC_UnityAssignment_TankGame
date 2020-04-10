@@ -99,6 +99,8 @@ MonoBehaviour:
   liveTime: 0.5
   speed: 20
   damage: 2
+  explosion: {fileID: 7390665921616802414, guid: 3da5d0dbcfd6445469327eb1de14c96b,
+    type: 3}
 --- !u!61 &6106013077426756143
 BoxCollider2D:
   m_ObjectHideFlags: 0

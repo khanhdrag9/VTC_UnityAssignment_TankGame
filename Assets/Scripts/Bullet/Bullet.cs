@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float liveTime;
     public float speed;
     public int damage;
+    public GameObject explosion;
 
     private void OnEnable()
     {
@@ -18,9 +19,10 @@ public class Bullet : MonoBehaviour
         transform.Translate(Vector2.up * speed * Time.deltaTime);
     }
 
-    public void Destroy()
+    public void Explode()
     {
         Destroy(gameObject);
+        Instantiate(explosion, transform.position, Quaternion.identity);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +32,6 @@ public class Bullet : MonoBehaviour
         {
             live.HP -= damage;
         }
-        Destroy();
+        Explode();
     }
 }
