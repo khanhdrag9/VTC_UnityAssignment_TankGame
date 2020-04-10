@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float liveTime;
     public float speed;
+    public int damage;
 
     private void OnEnable()
     {
@@ -24,6 +25,11 @@ public class Bullet : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        LiveObject live = collision.GetComponent<LiveObject>();
+        if(live)
+        {
+            live.HP -= damage;
+        }
         Destroy();
     }
 }

@@ -21,6 +21,7 @@ public class TankMovement : Movement
 
         rotation.Handle(direction);
         transform.Translate(Vector2.up * Speed * speedScale * Time.fixedDeltaTime);
+        transform.position = Controller.ClampPosition(transform.position, false, Vector2.one);
     }
 
     public override bool HandleWithTarget(Vector2 target, float speedScale)

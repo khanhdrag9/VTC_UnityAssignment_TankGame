@@ -7,9 +7,10 @@ public class EnemyPattern : MonoBehaviour
     public List<Vector2> points;
     public int startLoop;
     public float delayAvailable;
-    public Range objectAvailable;
+    public int objectAvailable;
 
     public bool isDone => enemies != null && enemies.Count == 0;
+    public ProgressBar progress { get; set; }
 
     private List<EnemyHandle> enemies;
 
@@ -46,6 +47,7 @@ public class EnemyPattern : MonoBehaviour
             if (e.enemy == null)
             {
                 enemies.RemoveAt(i);
+                progress?.Increase();
                 continue;
             }
 

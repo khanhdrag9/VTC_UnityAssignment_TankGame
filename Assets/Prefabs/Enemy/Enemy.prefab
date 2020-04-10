@@ -140,6 +140,7 @@ GameObject:
   - component: {fileID: 31396925260906621}
   - component: {fileID: 7888399140795037824}
   - component: {fileID: 7888399140795037831}
+  - component: {fileID: 1929370442136731559}
   - component: {fileID: 31738868995877038}
   m_Layer: 10
   m_Name: Enemy
@@ -241,7 +242,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   scale: 1
-  speedRotation: 0.15
 --- !u!114 &7888399140795037824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +271,21 @@ MonoBehaviour:
     type: 3}
   interval: 1.2
   shootPoint: {fileID: 31738869618353500}
+--- !u!114 &1929370442136731559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888399140795037886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe08e68c39bc6848a170a86f5940928, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startHP: 5
+  offsetHPbar: {x: 0, y: 0.8}
+  prefab: {fileID: 4501465848725095480, guid: eaddc8a14dcd52d40880107c13abaa37, type: 3}
 --- !u!61 &31738868995877038
 BoxCollider2D:
   m_ObjectHideFlags: 0
