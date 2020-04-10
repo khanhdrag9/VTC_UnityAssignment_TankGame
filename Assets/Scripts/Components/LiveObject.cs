@@ -46,8 +46,7 @@ public class LiveObject : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("Die : " + name);
         Destroy(gameObject);
-        Destroy(hpBar);
+        Destroy(hpBar.gameObject);
     }
 }

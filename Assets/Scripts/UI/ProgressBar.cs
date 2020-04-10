@@ -10,6 +10,8 @@ public class ProgressBar : MonoBehaviour
     private int currentKilledInWave;
     private int[] totalWaves;
 
+    private float targetValue;
+
     void Awake()
     {
         slider = GetComponent<Slider>();
@@ -18,6 +20,7 @@ public class ProgressBar : MonoBehaviour
     public void Setup(int[] totalWaves)
     {
         slider.value = 0;
+        targetValue = 0;
         this.totalWaves = totalWaves;
     }
 
@@ -42,11 +45,11 @@ public class ProgressBar : MonoBehaviour
 
         float wavePart = (1f / totalWaves.Length);
         float inWavePart = wavePart / totalWaves[currentWave];
-        slider.value = wavePart * currentWave + inWavePart * currentKilledInWave;
+        targetValue = wavePart * currentWave + inWavePart * currentKilledInWave;
     }
 
     void Update()
     {
-        
+        slider.value = Mathf.Lerp(slider.value, targetValue, 0.075f);
     }
 }
