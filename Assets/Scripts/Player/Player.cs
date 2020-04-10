@@ -18,7 +18,7 @@ public class Player : Tank
 
         if (Input.GetMouseButtonDown(0))
         {
-            shootObject?.Shoot(controlAbleObject.mouseDirect, 1, 1);
+            shootObject?.Shoot(controlAbleObject.mouseDirect);
         }
     }
 

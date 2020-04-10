@@ -8,16 +8,21 @@ public class EnemySpawner : MonoBehaviour
     public EnemyPattern[] patterns;
     public int delayEachWaves;
 
+    private EnemyPattern currentPattern;
+    private int currentPatternIndex;
+
     void Start()
     {
-        patterns = FindObjectsOfType<EnemyPattern>();
+        //patterns = FindObjectsOfType<EnemyPattern>();
+        currentPatternIndex = 0;
         Invoke("Spawn", delayEachWaves);
     }
 
     public void Spawn()
     {
-        EnemyPattern pattern = patterns[0];
-        StartCoroutine(IE_Spawn(pattern));
+        currentPattern = patterns[currentPatternIndex];
+        currentPatternIndex++;
+        StartCoroutine(IE_Spawn(currentPattern));
     }
 
     private IEnumerator IE_Spawn(EnemyPattern pattern)
@@ -32,8 +37,11 @@ public class EnemySpawner : MonoBehaviour
             yield return new WaitForSeconds(pattern.delayAvailable);
         }
     }
-
     void Update()
     {
+        if(currentPattern.isDone)
+        {
+            Invoke("Spawn", delayEachWaves);
+        }
     }
 }

@@ -7,8 +7,6 @@ public class Enemy : Tank
     public float ranger;
     public Transform target;
 
-    private Vector2 previousAngle;
-
     private int shootLayer;
     private void Start()
     {
@@ -33,11 +31,10 @@ public class Enemy : Tank
             Debug.Log(cast.collider.name);
             if (cast.collider.tag.Equals("Player") == false) return;
 
-            previousAngle = direction;
-            barrelRotation.Handle(previousAngle, 0.5f);
+            bool aim = barrelRotation.Handle(direction);
 
-            if (shootObject.canShoot)
-                shootObject.Shoot(barrelRotation.transform.rotation, 1, 1);
+            if (aim && shootObject.canShoot)
+                shootObject.Shoot(barrelRotation.transform.rotation);
         }
     }
 

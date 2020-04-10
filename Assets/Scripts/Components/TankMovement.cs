@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Rotation))]
 public class TankMovement : Movement
 {
-    [Range(0f, 1f)]public float speedRotation;
     private Rotation rotation = null;
 
     private void Start()
@@ -20,7 +19,7 @@ public class TankMovement : Movement
             direction += new Vector2(0.5f, 0.5f);
         }
 
-        rotation.Handle(direction, speedRotation);
+        rotation.Handle(direction);
         transform.Translate(Vector2.up * Speed * speedScale * Time.fixedDeltaTime);
     }
 
@@ -29,10 +28,10 @@ public class TankMovement : Movement
         float distanceMove = Speed * speedScale * Time.fixedDeltaTime;
         float distanceToTarget = (target - (Vector2)transform.position).magnitude;
 
-        bool reachTarget = distanceToTarget < distanceMove / speedRotation;
+        bool reachTarget = distanceToTarget < distanceMove / rotation.speed;
 
         Vector2 direction = (target - (Vector2)transform.position).normalized;
-        rotation.Handle(direction, speedRotation);
+        rotation.Handle(direction);
         if (!reachTarget)
         {
             transform.Translate(Vector2.up * distanceMove);

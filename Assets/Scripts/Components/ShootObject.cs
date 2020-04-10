@@ -11,12 +11,12 @@ public class ShootObject : MonoBehaviour
     private float nextShoot = 0;
     public bool canShoot => Time.time >= nextShoot;
 
-    public void Shoot(Vector2 direction, float bulletSpeedScale, float intervalSpeedScale)
+    public void Shoot(Vector2 direction, float bulletSpeedScale = 1, float intervalSpeedScale = 1)
     {
         Shoot(Quaternion.Euler(0, 0, Helper.Angle90(direction)), bulletSpeedScale, intervalSpeedScale);
     }
 
-    public void Shoot(Quaternion direction, float bulletSpeedScale, float intervalSpeedScale)
+    public void Shoot(Quaternion direction, float bulletSpeedScale = 1, float intervalSpeedScale = 1)
     {
         Bullet bullet = Instantiate(bulletPrefab);
         bullet.speed *= bulletSpeedScale;

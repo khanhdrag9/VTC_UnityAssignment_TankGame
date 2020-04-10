@@ -9,6 +9,8 @@ public class EnemyPattern : MonoBehaviour
     public float delayAvailable;
     public Range objectAvailable;
 
+    public bool isDone => enemies != null && enemies.Count == 0;
+
     private List<EnemyHandle> enemies;
 
     public void AddEnemy(Enemy enemy, int startIndex)
@@ -37,9 +39,18 @@ public class EnemyPattern : MonoBehaviour
     {
         if (enemies == null) return;
 
-        for(int i = 0; i < enemies.Count; i++)
+        for(int i = 0; i < enemies.Count;)
         {
             EnemyHandle e = enemies[i];
+
+            if (e.enemy == null)
+            {
+                enemies.RemoveAt(i);
+                continue;
+            }
+
+            ++i;
+
             if (e.enemy.MoveTo(points[e.indexMovement]) == false) continue;
             
             if (++e.indexMovement == points.Count)
