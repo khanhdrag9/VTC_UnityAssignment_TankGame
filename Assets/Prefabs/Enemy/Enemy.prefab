@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6737973437c278642bd48c8a5786a32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ranger: 30
+  ranger: 15
   target: {fileID: 0}
 --- !u!114 &31396925260906621
 MonoBehaviour:

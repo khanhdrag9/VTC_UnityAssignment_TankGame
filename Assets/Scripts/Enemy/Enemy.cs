@@ -31,6 +31,8 @@ public class Enemy : Tank
             if (cast.collider.tag.Equals("Player") == false) return;
 
             bool aim = barrelRotation.Handle(direction);
+            OpacityChanger playerOp = cast.collider.GetComponent<OpacityChanger>();
+            if (playerOp && playerOp.visible == false) return;
 
             if (aim && shootObject.canShoot)
                 shootObject.Shoot(barrelRotation.transform.rotation);
