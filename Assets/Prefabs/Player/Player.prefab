@@ -282,7 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 533476607798811704, guid: 7426f38ed31f4b34aa7f4370529dfdc7,
     type: 3}
-  interval: 0.1
+  interval: 0.2
   shootPoint: {fileID: 2142007020}
 --- !u!114 &7740114873251907778
 MonoBehaviour:

@@ -11,7 +11,7 @@ public class Bullet : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("Destroy", liveTime);
+        Invoke("Explode", liveTime);
     }
 
     void Update()

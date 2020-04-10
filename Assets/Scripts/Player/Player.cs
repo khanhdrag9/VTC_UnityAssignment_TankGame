@@ -16,7 +16,7 @@ public class Player : Tank
     {
         barrelRotation?.Handle(controlAbleObject.mouseDirect, 1);
 
-        if (Input.GetMouseButtonDown(0))
+        if (shootObject.canShoot && (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)))
         {
             shootObject?.Shoot(controlAbleObject.mouseDirect);
         }

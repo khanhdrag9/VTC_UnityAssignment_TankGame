@@ -44,6 +44,8 @@ public class Controller : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (target == null) return;
+
         UpdatePosition();
     }
 

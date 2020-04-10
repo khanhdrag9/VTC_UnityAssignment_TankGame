@@ -26,19 +26,19 @@ public class EnemySpawner : MonoBehaviour
 
         progress.Setup(totalWaves);
 
-        currentPatternIndex = 0;
+        currentPatternIndex = -1;
         Invoke("Spawn", delayEachWaves);
     }
 
     public void Spawn()
     {
-        currentPattern = patterns[currentPatternIndex];
         if(++currentPatternIndex >= patterns.Length)
         {
             Debug.Log("victory");
             return;
         }
 
+        currentPattern = patterns[currentPatternIndex];
         StartCoroutine(IE_Spawn(currentPattern));
     }
 

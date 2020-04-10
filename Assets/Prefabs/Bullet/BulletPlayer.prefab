@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37706d2bf301df24fab4a3a4d87339f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  liveTime: 0.5
+  liveTime: 0.7
   speed: 20
   damage: 2
   explosion: {fileID: 7390665921616802414, guid: 3da5d0dbcfd6445469327eb1de14c96b,

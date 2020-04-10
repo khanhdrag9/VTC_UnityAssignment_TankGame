@@ -28,7 +28,6 @@ public class Enemy : Tank
         
         if(cast)
         {
-            Debug.Log(cast.collider.name);
             if (cast.collider.tag.Equals("Player") == false) return;
 
             bool aim = barrelRotation.Handle(direction);
