@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float speed;
     public int damage;
     public GameObject explosion;
+    public GameObject shooter { get; set; }
 
     private void OnEnable()
     {
@@ -27,6 +28,8 @@ public class Bullet : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        if (shooter &&  collision.gameObject == shooter) return;
+
         LiveObject live = collision.GetComponent<LiveObject>();
         if(live)
         {

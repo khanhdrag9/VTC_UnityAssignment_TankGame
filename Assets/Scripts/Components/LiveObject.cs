@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
-public class LiveObject : MonoBehaviour
+public class LiveObject : MonoBehaviour, IPunObservable
 {
     [SerializeField] int startHP;
     [SerializeField] Vector2 offsetHPbar;
@@ -33,9 +34,12 @@ public class LiveObject : MonoBehaviour
         }
     }
 
+    private PhotonView photonView;
+
     private void Start()
     {
         HP = startHP;
+        photonView = GetComponent<PhotonView>();
     }
 
     private void Update()
@@ -48,5 +52,17 @@ public class LiveObject : MonoBehaviour
     {
         Destroy(gameObject);
         Destroy(hpBar.gameObject);
+    }
+
+    void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+    {
+        if (stream.IsWriting)
+        {
+            stream.SendNext(HP);
+        }
+        else
+        {
+            HP = (int)stream.ReceiveNext();
+        }
     }
 }

@@ -22,6 +22,7 @@ public class ShootObject : MonoBehaviour
         bullet.speed *= bulletSpeedScale;
         bullet.transform.position = shootPoint.position;
         bullet.transform.rotation = direction;
+        bullet.shooter = gameObject;
 
         nextShoot = Time.time + interval * intervalSpeedScale;
     }

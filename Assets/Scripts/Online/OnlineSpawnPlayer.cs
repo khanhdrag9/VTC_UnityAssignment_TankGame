@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class OnlineSpawnPlayer : MonoBehaviour
 {
@@ -22,7 +23,12 @@ public class OnlineSpawnPlayer : MonoBehaviour
 
     public void SpawnPlayer()
     {
-        var player = Instantiate(prefab, GetPosition(), Quaternion.identity);
+        GameObject player = null;
+        if(GameManager.Instance.gamemode == GameMode.MULTI)
+            player = PhotonNetwork.Instantiate("Player", GetPosition(), Quaternion.identity);
+        else
+            player = Instantiate(prefab, GetPosition(), Quaternion.identity).gameObject;
+
         controller.target = player.GetComponent<ControlAbleObject>();
     }
 

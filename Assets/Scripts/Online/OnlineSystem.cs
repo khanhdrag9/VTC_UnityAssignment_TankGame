@@ -5,7 +5,7 @@ using Photon.Realtime;
 using Photon.Pun;
 
 public class OnlineSystem : MonoBehaviourPunCallbacks
-{ 
+{
     public string playerName { get; set; }
 
     private const string gameversion = "1";
@@ -60,7 +60,7 @@ public class OnlineSystem : MonoBehaviourPunCallbacks
         RoomOptions options = new RoomOptions();
         options.IsOpen = true;
         options.IsVisible = true;
-        options.MaxPlayers = 8;
+        options.MaxPlayers = 4;
 
         PhotonNetwork.CreateRoom("room1", options, TypedLobby.Default);
     }
