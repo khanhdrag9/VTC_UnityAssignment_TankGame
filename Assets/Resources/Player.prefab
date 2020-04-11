@@ -270,6 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fa87a8a90f76d4d8aef8a18ad06ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nameDisplayPrefab: {fileID: 4643014108022531845, guid: 0ed66d641ef0eca41b4cf92fe2bb4f03,
+    type: 3}
+  offsetName: {x: 0, y: 1.1, z: 0}
 --- !u!114 &2274836331858984746
 MonoBehaviour:
   m_ObjectHideFlags: 0

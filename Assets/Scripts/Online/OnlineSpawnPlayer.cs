@@ -24,8 +24,12 @@ public class OnlineSpawnPlayer : MonoBehaviour
     public void SpawnPlayer()
     {
         GameObject player = null;
-        if(GameManager.Instance.gamemode == GameMode.MULTI)
+        if (GameManager.Instance.gamemode == GameMode.MULTI)
+        {
             player = PhotonNetwork.Instantiate("Player", GetPosition(), Quaternion.identity);
+            player.GetComponent<PhotonView>().RPC("SetName", RpcTarget.All, OnlineSystem.Instance.playerName);
+            
+        }
         else
             player = Instantiate(prefab, GetPosition(), Quaternion.identity).gameObject;
 

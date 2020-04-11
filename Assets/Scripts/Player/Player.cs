@@ -5,16 +5,19 @@ using Photon.Pun;
 
 public class Player : Tank
 {
+    public TextMesh nameDisplayPrefab;
+    public Vector3 offsetName;
+
     private ControlAbleObject controlAbleObject;
     private PhotonView photonView;
+    private Transform nameDisplayer;
+
 
     public override void ReUpdateComponents()
     {
         base.ReUpdateComponents();
         controlAbleObject = GetComponent<ControlAbleObject>();
-
-        if(GameManager.Instance.gamemode == GameMode.MULTI)
-            photonView = GetComponent<PhotonView>();
+        photonView = GetComponent<PhotonView>();
     }
 
     protected override void UpdateMine()
@@ -38,16 +41,31 @@ public class Player : Tank
         shootObject?.Shoot(barrelRotation.transform.rotation);
     }
 
+    [PunRPC]
+    public void SetName(string name)
+    {
+        var o = Instantiate(nameDisplayPrefab, transform.position + offsetName, Quaternion.identity);
+        nameDisplayer = o.transform;
+        o.GetComponent<Renderer>().sortingLayerName = "Objects";
+        o.text = name;
+    }
+
     protected override void FixedUpdateMine()
     {
         movement?.Handle(controlAbleObject.direct, 1);
+
+        if (nameDisplayer)
+            nameDisplayer.position = transform.position + offsetName;
     }
 
     private void OnDestroy()
     {
+        if (nameDisplayer)
+            Destroy(nameDisplayer.gameObject);
+
         if (GameManager.Instance.gamemode == GameMode.MULTI && !photonView.IsMine)
         {
-
+            
         }
         else
         {
