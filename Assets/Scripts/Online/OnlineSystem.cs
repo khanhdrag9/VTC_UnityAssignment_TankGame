@@ -23,7 +23,7 @@ public class OnlineSystem : MonoBehaviourPunCallbacks
         }
 
         Instance = this;
-        PhotonNetwork.AutomaticallySyncScene = true;
+        PhotonNetwork.AutomaticallySyncScene = false;
     }
 
     public void Find()
@@ -33,7 +33,6 @@ public class OnlineSystem : MonoBehaviourPunCallbacks
 
     private void Connect()
     {
-        PhotonNetwork.NickName = playerName;
         if(PhotonNetwork.IsConnected)
         {
             PhotonNetwork.JoinRandomRoom();
@@ -66,7 +65,12 @@ public class OnlineSystem : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
+        PhotonNetwork.NickName = playerName;
         PhotonNetwork.LoadLevel(3);
     }
 
+    private void OnApplicationQuit()
+    {
+        PhotonNetwork.Disconnect();
+    }
 }

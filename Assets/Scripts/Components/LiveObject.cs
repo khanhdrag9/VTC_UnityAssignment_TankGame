@@ -56,7 +56,9 @@ public class LiveObject : MonoBehaviour, IPunObservable
 
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
-        if (stream.IsWriting)
+        if (photonView == null) return;
+
+        if (photonView.IsMine)
         {
             stream.SendNext(HP);
         }

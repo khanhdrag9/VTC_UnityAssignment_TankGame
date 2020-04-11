@@ -19,20 +19,23 @@ public class Player : Tank
 
     protected override void UpdateMine()
     {
-        barrelRotation?.Handle(controlAbleObject.mouseDirect, 1);
-
         if (photonView && photonView.IsMine == false) return;
 
+        barrelRotation?.Handle(controlAbleObject.mouseDirect, 1);
         if (shootObject.canShoot && (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)))
         {
-            Shoot();
+            if (GameManager.Instance.gamemode == GameMode.MULTI)
+                photonView.RPC("Shoot", RpcTarget.All);
+            else
+                Shoot();
         }
     }
 
     [PunRPC]
     public void Shoot()
     {
-        shootObject?.Shoot(controlAbleObject.mouseDirect);
+        //shootObject?.Shoot(controlAbleObject.mouseDirect);
+        shootObject?.Shoot(barrelRotation.transform.rotation);
     }
 
     protected override void FixedUpdateMine()
@@ -42,9 +45,9 @@ public class Player : Tank
 
     private void OnDestroy()
     {
-        if (GameManager.Instance.gamemode == GameMode.MULTI)
+        if (GameManager.Instance.gamemode == GameMode.MULTI && !photonView.IsMine)
         {
-           
+
         }
         else
         {
