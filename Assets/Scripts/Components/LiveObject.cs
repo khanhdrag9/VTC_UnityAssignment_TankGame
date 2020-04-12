@@ -20,7 +20,17 @@ public class LiveObject : MonoBehaviour, IPunObservable
         set
         {
             hp = value;
-            if (hp <= 0) Die();
+            if (hp <= 0)
+            {
+                if (GameManager.Instance.gamemode == GameMode.SINGLE)
+                {
+                    Die();
+                }
+                else
+                {
+                    photonView.RPC("Die", RpcTarget.All);
+                }
+            }
         }
     }
 
@@ -43,16 +53,19 @@ public class LiveObject : MonoBehaviour, IPunObservable
         }
     }
 
+    [PunRPC]
     public void Die()
     {
         if (GameManager.Instance.gamemode == GameMode.SINGLE)
         {
-            Destroy(gameObject);  
+            //Destroy(gameObject);  
         }
         else
         {
-            PhotonNetwork.Destroy(gameObject);
+            //PhotonNetwork.Destroy(gameObject);
         }
+
+        Destroy(gameObject);
         Destroy(hpBar.gameObject);
     }
 

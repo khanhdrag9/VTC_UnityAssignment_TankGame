@@ -11,13 +11,21 @@ public class TextSync : MonoBehaviour, IPunObservable
     public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
         if(view == null) view = GetComponent<PhotonView>();
-        if (view.IsMine)
+
+        try
         {
-            stream.SendNext(value);
+            if (view.IsMine)
+            {
+                stream.SendNext(value);
+            }
+            else
+            {
+                value = (string)stream.ReceiveNext();
+            }
         }
-        else
+        catch
         {
-            value = (string)stream.ReceiveNext();
+            Debug.LogError("Error at TextSync");
         }
     }
 }

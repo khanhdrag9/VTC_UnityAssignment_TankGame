@@ -28,6 +28,8 @@ public abstract class Tank : MonoBehaviour
 
     protected abstract void FixedUpdateMine();
 
+    public virtual void DestroyHandle() { }
+
     #region basic loop
     private void Update()
     {
@@ -37,6 +39,11 @@ public abstract class Tank : MonoBehaviour
     private void FixedUpdate()
     {
         FixedUpdateMine();
+    }
+
+    private void OnDestroy()
+    {
+        DestroyHandle();
     }
     #endregion
 }

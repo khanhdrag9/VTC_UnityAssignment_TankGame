@@ -6,7 +6,6 @@ public class PlayerName : MonoBehaviour
 {
     private TextMesh displayer;
     private TextSync textOnline;
-
     void Awake()
     {
         displayer = GetComponent<TextMesh>();

@@ -10,7 +10,8 @@ public class Player : Tank
 
     private ControlAbleObject controlAbleObject;
     private PhotonView photonView;
-    private Transform nameDisplayer;
+
+    public Transform nameDisplayer;
 
 
     public override void ReUpdateComponents()
@@ -64,17 +65,16 @@ public class Player : Tank
             nameDisplayer.position = transform.position + offsetName;
     }
 
-    private void OnDestroy()
+    public override void DestroyHandle()
     {
-
         if (GameManager.Instance.gamemode != GameMode.SINGLE && !photonView.IsMine)
         {
-            if (nameDisplayer) PhotonNetwork.Destroy(nameDisplayer.gameObject);
+            
         }
         else
         {
+            Debug.LogError("Defeat");
             FindObjectOfType<Controller>()?.ActiveDefeat();
-            if (nameDisplayer) Destroy(nameDisplayer.gameObject);
         }
     }
 }
