@@ -17,7 +17,7 @@ MonoBehaviour:
     AppIdChat: 
     AppIdVoice: 
     AppVersion: 
-    UseNameServer: 1
+    UseNameServer: 0
     FixedRegion: 
     Server: 192.168.1.8
     Port: 4530
@@ -38,6 +38,7 @@ MonoBehaviour:
   - RespawnSpaceship
   - Shoot
   - SetName
+  - Die
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

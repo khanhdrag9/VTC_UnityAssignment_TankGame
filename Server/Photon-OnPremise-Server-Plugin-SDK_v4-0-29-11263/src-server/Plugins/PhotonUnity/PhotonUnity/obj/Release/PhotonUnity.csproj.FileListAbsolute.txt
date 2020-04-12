@@ -1,0 +1,6 @@
+C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\bin\PhotonUnity.dll
+C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\bin\PhotonUnity.pdb
+C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\src-server\Plugins\PhotonUnity\PhotonUnity\obj\Release\PhotonUnity.csprojAssemblyReference.cache
+C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\src-server\Plugins\PhotonUnity\PhotonUnity\obj\Release\PhotonUnity.csproj.CopyComplete
+C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\src-server\Plugins\PhotonUnity\PhotonUnity\obj\Release\PhotonUnity.dll
+C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\src-server\Plugins\PhotonUnity\PhotonUnity\obj\Release\PhotonUnity.pdb
