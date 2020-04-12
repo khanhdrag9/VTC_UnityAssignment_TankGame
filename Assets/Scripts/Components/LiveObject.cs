@@ -20,18 +20,7 @@ public class LiveObject : MonoBehaviour, IPunObservable
         set
         {
             hp = value;
-
-            if(hpBar == null)
-            {
-                hpBar = Instantiate(prefab);
-                hpBar.transform.position = (Vector2)transform.position + offsetHPbar;
-            }
-
-            hpBar.value = Mathf.Clamp(hp / (float)startHP, 0f, 1f);
-
             if (hp <= 0) Die();
-
-            
         }
     }
 
@@ -41,17 +30,29 @@ public class LiveObject : MonoBehaviour, IPunObservable
     {
         HP = startHP;
         photonView = GetComponent<PhotonView>();
+        hpBar = Instantiate(prefab);
+        hpBar.transform.position = (Vector2)transform.position + offsetHPbar;
     }
 
     private void Update()
     {
-        if(hpBar)
+        if (hpBar)
+        {
             hpBar.transform.position = (Vector2)transform.position + offsetHPbar;
+            hpBar.value = Mathf.Clamp(HP / (float)startHP, 0f, 1f);
+        }
     }
 
     public void Die()
     {
-        Destroy(gameObject);
+        if (GameManager.Instance.gamemode == GameMode.SINGLE)
+        {
+            Destroy(gameObject);  
+        }
+        else
+        {
+            PhotonNetwork.Destroy(gameObject);
+        }
         Destroy(hpBar.gameObject);
     }
 

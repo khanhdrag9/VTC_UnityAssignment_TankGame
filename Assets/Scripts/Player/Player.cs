@@ -44,7 +44,7 @@ public class Player : Tank
     }
 
     //[PunRPC]
-    public void SetName(string name)
+    public void SetName(string nameDisplay)
     {
         TextMesh o = GameManager.Instance.gamemode == GameMode.SINGLE ?
             Instantiate(nameDisplayPrefab, transform.position + offsetName, Quaternion.identity) :
@@ -52,7 +52,8 @@ public class Player : Tank
 
         nameDisplayer = o.transform;
         o.GetComponent<Renderer>().sortingLayerName = "Objects";
-        o.text = name;
+        o.text = nameDisplay;
+        o.GetComponent<TextSync>().value = nameDisplay;
     }
 
     protected override void FixedUpdateMine()
@@ -65,16 +66,15 @@ public class Player : Tank
 
     private void OnDestroy()
     {
-        if (nameDisplayer)
-            Destroy(nameDisplayer.gameObject);
 
         if (GameManager.Instance.gamemode != GameMode.SINGLE && !photonView.IsMine)
         {
-            
+            if (nameDisplayer) PhotonNetwork.Destroy(nameDisplayer.gameObject);
         }
         else
         {
             FindObjectOfType<Controller>()?.ActiveDefeat();
+            if (nameDisplayer) Destroy(nameDisplayer.gameObject);
         }
     }
 }
