@@ -12,20 +12,15 @@ public class TextSync : MonoBehaviour, IPunObservable
     {
         if(view == null) view = GetComponent<PhotonView>();
 
-        try
+   
+        if (view.IsMine)
         {
-            if (view.IsMine)
-            {
-                stream.SendNext(value);
-            }
-            else
-            {
-                value = (string)stream.ReceiveNext();
-            }
+            stream.SendNext(value);
         }
-        catch
+        else
         {
-            Debug.LogError("Error at TextSync");
+            value = (string)stream.ReceiveNext();
         }
+        
     }
 }

@@ -16,3 +16,15 @@
 15852: 21:09:25.844 - Will produce at most: 10 crash dumps
 15852: 21:09:25.844 - Service shutting down
 15852: 21:09:25.845 - Service shut down complete
+16884: 21:22:02.183 - ---
+16884: 21:22:02.183 - Service: "Photon Socket Server" starting
+16884: 21:22:02.184 - Config File: C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+16884: 21:22:02.185 - Will produce at most: 10 crash dumps
+16884: 21:22:02.185 - Service shutting down
+16884: 21:22:02.185 - Service shut down complete
+14996: 21:32:51.278 - ---
+14996: 21:32:51.278 - Service: "Photon Socket Server" starting
+14996: 21:32:51.278 - Config File: C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\bin_Win64\PhotonServer.config
+14996: 21:32:51.280 - Will produce at most: 10 crash dumps
+14996: 21:32:51.280 - Service shutting down
+14996: 21:32:51.280 - Service shut down complete

@@ -59,6 +59,8 @@ public class Player : Tank
 
     protected override void FixedUpdateMine()
     {
+        if (photonView && photonView.IsMine == false) return;
+
         movement?.Handle(controlAbleObject.direct, 1);
 
         if (nameDisplayer)
