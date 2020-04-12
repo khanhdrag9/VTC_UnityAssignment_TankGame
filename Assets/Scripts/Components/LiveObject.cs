@@ -63,7 +63,7 @@ public class LiveObject : MonoBehaviour, IPunObservable
         //old = Time.time;
         if (photonView == null) return;
 
-        if (stream.IsWriting)
+        if (photonView.IsMine)
         {
             stream.SendNext(HP);
         }

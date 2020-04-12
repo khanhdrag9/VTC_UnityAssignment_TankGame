@@ -25,8 +25,8 @@ public class OnlineSystem : MonoBehaviourPunCallbacks
 
         Instance = this;
         PhotonNetwork.AutomaticallySyncScene = false;
-        PhotonNetwork.SendRate = 80;
-        PhotonNetwork.SerializationRate = 60;
+        //PhotonNetwork.SendRate = 300;
+        //PhotonNetwork.SerializationRate = 150;
     }
 
     public void Find()

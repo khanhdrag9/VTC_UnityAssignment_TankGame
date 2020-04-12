@@ -43,7 +43,7 @@ public class Player : Tank
         shootObject?.Shoot(barrelRotation.transform.rotation);
     }
 
-    [PunRPC]
+    //[PunRPC]
     public void SetName(string name)
     {
         TextMesh o = GameManager.Instance.gamemode == GameMode.SINGLE ?
