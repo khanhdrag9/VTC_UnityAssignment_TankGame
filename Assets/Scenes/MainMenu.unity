@@ -665,6 +665,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cloudSetting: {fileID: 11400000, guid: 716558e902aabf843a976cf7e2d350e6, type: 2}
   serverSetting: {fileID: 11400000, guid: 84ca76633df2ce140b8a73cb1cac601c, type: 2}
+  notificationPrefab: {fileID: -8059959275126036876, guid: 308cd258d289c594bbd8e71893f79928,
+    type: 3}
 --- !u!1 &695472318
 GameObject:
   m_ObjectHideFlags: 0

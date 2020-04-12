@@ -191,3 +191,6 @@
 2020-04-12 13:20:42,621 [17] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Lowest to Low with input 35
 2020-04-12 13:20:42,621 [17] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Lowest, new=Low
 2020-04-12 13:20:56,365 [22] INFO  Photon.Hive.Plugin.PluginManager - Plugin successfully created:Type:PhotonUnity.Factory, path:C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 13:22:24,226 [17] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Low to Lowest with input 20
+2020-04-12 13:22:24,232 [17] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Low, new=Lowest
+2020-04-12 13:22:57,891 [23] INFO  Photon.Hive.Plugin.PluginManager - Plugin successfully created:Type:PhotonUnity.Factory, path:C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
