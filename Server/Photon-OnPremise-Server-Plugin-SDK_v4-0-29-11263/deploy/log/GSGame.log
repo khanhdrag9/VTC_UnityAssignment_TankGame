@@ -194,3 +194,135 @@
 2020-04-12 13:22:24,226 [17] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Low to Lowest with input 20
 2020-04-12 13:22:24,232 [17] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Low, new=Lowest
 2020-04-12 13:22:57,891 [23] INFO  Photon.Hive.Plugin.PluginManager - Plugin successfully created:Type:PhotonUnity.Factory, path:C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 21:07:07,244 [1] INFO  Photon.LoadBalancing.GameServer.GameApplication - Setup: serverId=ef3b1dfd-1c8c-4bda-ba01-e42b295a8928
+2020-04-12 21:07:07,272 [1] INFO  Photon.Hive.Plugin.PluginManager - Plugin configured: name=PhotonUnity
+2020-04-12 21:07:07,272 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: BaseUrl=
+2020-04-12 21:07:07,272 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: IsPersistent=true
+2020-04-12 21:07:07,272 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: HasErrorInfo=true
+2020-04-12 21:07:07,272 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathClose=GameClose
+2020-04-12 21:07:07,272 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathCreate=GameCreate
+2020-04-12 21:07:07,272 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathEvent=GameEvent
+2020-04-12 21:07:07,273 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathGameProperties=GameProperties
+2020-04-12 21:07:07,274 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathJoin=GameJoin
+2020-04-12 21:07:07,275 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathLeave=GameLeave
+2020-04-12 21:07:07,276 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathLoad=GameCreate
+2020-04-12 21:07:07,296 [1] INFO  Photon.Hive.Plugin.PluginManager - Loaded Assembly Name=PhotonUnity, Version=1.0.0.0, Culture=, PublicKey token=, Path=C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 21:07:07,296 [1] INFO  Photon.Hive.Plugin.PluginManager - Referenced Assembly Name=mscorlib, Version=4.0.0.0, Culture=, PublicKey token=B7-7A-5C-56-19-34-E0-89, Path=
+2020-04-12 21:07:07,296 [1] INFO  Photon.Hive.Plugin.PluginManager - Referenced Assembly Name=PhotonHivePlugin, Version=1.0.15.11060, Culture=, PublicKey token=, Path=
+2020-04-12 21:07:07,296 [1] INFO  Photon.Hive.Plugin.PluginManager - Plugin Type PhotonUnity.Factory from assembly PhotonUnity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null was successfuly created
+2020-04-12 21:07:07,297 [1] INFO  Photon.Hive.Plugin.PluginManager - Plugin manager (version=1.0.15.11060) is setup. type=PhotonUnity.Factory;path=C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll;version=1.0.15.11060
+2020-04-12 21:07:07,539 [1] INFO  Photon.SocketServer.Diagnostics.HttpQueuePerformanceCounters - HTTP Queue performance counters successfully initialized
+2020-04-12 21:07:07,540 [1] INFO  Photon.SocketServer.Diagnostics.HttpQueuePerformanceCounters - Internal HTTP Queue performance counters successfully created
+2020-04-12 21:07:07,545 [1] INFO  Photon.LoadBalancing.GameServer.GameApplication - TokenCreator intialized with an expiration of 02:46:40
+2020-04-12 21:07:07,556 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter Business Logic Queue
+2020-04-12 21:07:07,557 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter ENet Queue
+2020-04-12 21:07:07,557 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter bytes in/sec
+2020-04-12 21:07:07,557 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter bytes out/sec
+2020-04-12 21:07:07,557 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter ENet Threads Processing
+2020-04-12 21:07:07,558 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter ENet Threads Active
+2020-04-12 21:07:07,558 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter Time Spent In Server: In (ms)
+2020-04-12 21:07:07,558 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter Time Spent In Server: Out (ms)
+2020-04-12 21:07:07,558 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter TCP: Disconnected Peers +/sec
+2020-04-12 21:07:07,558 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter TCP: Disconnected Peers (C) +/sec
+2020-04-12 21:07:07,558 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter TCP: Peers
+2020-04-12 21:07:07,559 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter UDP: Disconnected Peers +/sec
+2020-04-12 21:07:07,559 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter UDP: Disconnected Peers (C) +/sec
+2020-04-12 21:07:07,559 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter UDP: Peers
+2020-04-12 21:07:07,569 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.FeedbackControlSystem - Could not initialize Feedback Control System from configuration: Invalid configuration file C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Workload.config. Using default settings... (Could not find file 'C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Workload.config'.)
+2020-04-12 21:07:07,576 [1] INFO  Photon.Common.LoadBalancer.ServerStateManager - Watching for application state file in C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\ServerState.txt
+2020-04-12 21:07:07,578 [1] INFO  Photon.Common.LoadBalancer.ServerStateManager - Server state is set to online
+2020-04-12 21:07:07,579 [1] INFO  Photon.LoadBalancing.GameServer.GameApplication - Initializing master server connection ...
+2020-04-12 21:07:07,590 [1] INFO  Photon.LoadBalancing.GameServer.MasterServerConnectionBase - Connecting to master at 127.0.0.1:4520, serverId=ef3b1dfd-1c8c-4bda-ba01-e42b295a8928
+2020-04-12 21:07:07,607 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=Game; AppPath=C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\LoadBalancing\GameServer, Type=Photon.LoadBalancing.GameServer.GameApplication 
+2020-04-12 21:07:07,613 [1] INFO  Photon.SocketServer.Diagnostics.CounterPublisher - CounterPublisher started publishing ExitGames.Diagnostics.Monitoring.CounterSamplePublisher to ExitGames.Diagnostics.Monitoring.CounterSampleSender
+2020-04-12 21:07:08,454 [10] INFO  Photon.LoadBalancing.GameServer.MasterServerConnectionBase - Master connection established: address:127.0.0.1
+2020-04-12 21:07:08,455 [10] INFO  Photon.Common.LoadBalancer.ServerStateManager - Server state is set to online
+2020-04-12 21:07:08,458 [10] INFO  Photon.LoadBalancing.GameServer.OutgoingMasterServerPeer - Registering game server with address 192.168.1.8, TCP 4531, UDP 5056, WebSocket 9091, Secure WebSocket 19091, HTTP 80, ServerID ef3b1dfd-1c8c-4bda-ba01-e42b295a8928, Hostname localhost, IPv6Address 
+2020-04-12 21:07:08,520 [10] INFO  Photon.LoadBalancing.GameServer.OutgoingMasterServerPeer - Successfully registered at master server: serverId=ef3b1dfd-1c8c-4bda-ba01-e42b295a8928
+2020-04-12 21:07:09,225 [11] INFO  Photon.Hive.Plugin.PluginManager - Plugin successfully created:Type:PhotonUnity.Factory, path:C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 21:07:09,356 [10] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:07:09,369 [10] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:07:09,369 [10] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:07:09,699 [10] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Lowest to Low with input 43
+2020-04-12 21:07:09,699 [10] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Lowest, new=Low
+2020-04-12 21:07:21,820 [10] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Low to Normal with input 50
+2020-04-12 21:07:21,820 [10] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Low, new=Normal
+2020-04-12 21:07:52,100 [13] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:07:52,723 [13] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:08:49,462 [13] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Normal to Low with input 35
+2020-04-12 21:08:49,472 [13] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Normal, new=Low
+2020-04-12 21:09:25,843 [1] INFO  Photon.LoadBalancing.GameServer.GameApplication - OnStopRequested: serverid=ef3b1dfd-1c8c-4bda-ba01-e42b295a8928
+2020-04-12 21:09:25,844 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=Game
+2020-04-12 21:09:25,855 [10] INFO  Photon.LoadBalancing.GameServer.OutgoingMasterServerPeer - connection to master closed (id=2, reason=ManagedDisconnect, detail=), serverId=ef3b1dfd-1c8c-4bda-ba01-e42b295a8928
+2020-04-12 21:09:25,859 [1] INFO  Photon.LoadBalancing.GameServer.GameApplication - TearDown: serverId=ef3b1dfd-1c8c-4bda-ba01-e42b295a8928
+2020-04-12 21:09:25,859 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=Game
+2020-04-12 21:09:43,073 [1] INFO  Photon.LoadBalancing.GameServer.GameApplication - Setup: serverId=c7404513-11b7-49fa-9305-b9e8b6e6d11b
+2020-04-12 21:09:43,093 [1] INFO  Photon.Hive.Plugin.PluginManager - Plugin configured: name=PhotonUnity
+2020-04-12 21:09:43,093 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: BaseUrl=
+2020-04-12 21:09:43,093 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: IsPersistent=true
+2020-04-12 21:09:43,094 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: HasErrorInfo=true
+2020-04-12 21:09:43,094 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathClose=GameClose
+2020-04-12 21:09:43,094 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathCreate=GameCreate
+2020-04-12 21:09:43,094 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathEvent=GameEvent
+2020-04-12 21:09:43,095 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathGameProperties=GameProperties
+2020-04-12 21:09:43,095 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathJoin=GameJoin
+2020-04-12 21:09:43,095 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathLeave=GameLeave
+2020-04-12 21:09:43,095 [1] INFO  Photon.Hive.Plugin.PluginManager - 	Attribute: PathLoad=GameCreate
+2020-04-12 21:09:43,112 [1] INFO  Photon.Hive.Plugin.PluginManager - Loaded Assembly Name=PhotonUnity, Version=1.0.0.0, Culture=, PublicKey token=, Path=C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 21:09:43,112 [1] INFO  Photon.Hive.Plugin.PluginManager - Referenced Assembly Name=mscorlib, Version=4.0.0.0, Culture=, PublicKey token=B7-7A-5C-56-19-34-E0-89, Path=
+2020-04-12 21:09:43,112 [1] INFO  Photon.Hive.Plugin.PluginManager - Referenced Assembly Name=PhotonHivePlugin, Version=1.0.15.11060, Culture=, PublicKey token=, Path=
+2020-04-12 21:09:43,113 [1] INFO  Photon.Hive.Plugin.PluginManager - Plugin Type PhotonUnity.Factory from assembly PhotonUnity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null was successfuly created
+2020-04-12 21:09:43,113 [1] INFO  Photon.Hive.Plugin.PluginManager - Plugin manager (version=1.0.15.11060) is setup. type=PhotonUnity.Factory;path=C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll;version=1.0.15.11060
+2020-04-12 21:09:43,348 [1] INFO  Photon.SocketServer.Diagnostics.HttpQueuePerformanceCounters - HTTP Queue performance counters successfully initialized
+2020-04-12 21:09:43,348 [1] INFO  Photon.SocketServer.Diagnostics.HttpQueuePerformanceCounters - Internal HTTP Queue performance counters successfully created
+2020-04-12 21:09:43,353 [1] INFO  Photon.LoadBalancing.GameServer.GameApplication - TokenCreator intialized with an expiration of 02:46:40
+2020-04-12 21:09:43,362 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter Business Logic Queue
+2020-04-12 21:09:43,362 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter ENet Queue
+2020-04-12 21:09:43,362 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter bytes in/sec
+2020-04-12 21:09:43,363 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter bytes out/sec
+2020-04-12 21:09:43,363 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter ENet Threads Processing
+2020-04-12 21:09:43,363 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter ENet Threads Active
+2020-04-12 21:09:43,364 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter Time Spent In Server: In (ms)
+2020-04-12 21:09:43,364 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter Time Spent In Server: Out (ms)
+2020-04-12 21:09:43,364 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter TCP: Disconnected Peers +/sec
+2020-04-12 21:09:43,365 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter TCP: Disconnected Peers (C) +/sec
+2020-04-12 21:09:43,365 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter TCP: Peers
+2020-04-12 21:09:43,366 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter UDP: Disconnected Peers +/sec
+2020-04-12 21:09:43,366 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter UDP: Disconnected Peers (C) +/sec
+2020-04-12 21:09:43,368 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - Did not find counter UDP: Peers
+2020-04-12 21:09:43,376 [1] WARN  Photon.Common.LoadBalancer.LoadShedding.FeedbackControlSystem - Could not initialize Feedback Control System from configuration: Invalid configuration file C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Workload.config. Using default settings... (Could not find file 'C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Workload.config'.)
+2020-04-12 21:09:43,384 [1] INFO  Photon.Common.LoadBalancer.ServerStateManager - Watching for application state file in C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\ServerState.txt
+2020-04-12 21:09:43,386 [1] INFO  Photon.Common.LoadBalancer.ServerStateManager - Server state is set to online
+2020-04-12 21:09:43,388 [1] INFO  Photon.LoadBalancing.GameServer.GameApplication - Initializing master server connection ...
+2020-04-12 21:09:43,397 [1] INFO  Photon.LoadBalancing.GameServer.MasterServerConnectionBase - Connecting to master at 127.0.0.1:4520, serverId=c7404513-11b7-49fa-9305-b9e8b6e6d11b
+2020-04-12 21:09:43,416 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=Game; AppPath=C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\LoadBalancing\GameServer, Type=Photon.LoadBalancing.GameServer.GameApplication 
+2020-04-12 21:09:43,422 [1] INFO  Photon.SocketServer.Diagnostics.CounterPublisher - CounterPublisher started publishing ExitGames.Diagnostics.Monitoring.CounterSamplePublisher to ExitGames.Diagnostics.Monitoring.CounterSampleSender
+2020-04-12 21:09:44,228 [10] INFO  Photon.LoadBalancing.GameServer.MasterServerConnectionBase - Master connection established: address:127.0.0.1
+2020-04-12 21:09:44,228 [10] INFO  Photon.Common.LoadBalancer.ServerStateManager - Server state is set to online
+2020-04-12 21:09:44,232 [10] INFO  Photon.LoadBalancing.GameServer.OutgoingMasterServerPeer - Registering game server with address 192.168.1.8, TCP 4531, UDP 5056, WebSocket 9091, Secure WebSocket 19091, HTTP 80, ServerID c7404513-11b7-49fa-9305-b9e8b6e6d11b, Hostname localhost, IPv6Address 
+2020-04-12 21:09:44,290 [13] INFO  Photon.LoadBalancing.GameServer.OutgoingMasterServerPeer - Successfully registered at master server: serverId=c7404513-11b7-49fa-9305-b9e8b6e6d11b
+2020-04-12 21:09:44,491 [13] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Lowest to Low with input 35
+2020-04-12 21:09:44,492 [13] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Lowest, new=Low
+2020-04-12 21:09:46,222 [13] INFO  Photon.Hive.Plugin.PluginManager - Plugin successfully created:Type:PhotonUnity.Factory, path:C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 21:09:46,370 [13] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:09:46,381 [13] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:09:46,382 [13] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:09:51,525 [11] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Low to Normal with input 51
+2020-04-12 21:09:51,525 [11] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Low, new=Normal
+2020-04-12 21:10:05,967 [12] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:11:55,403 [13] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Normal to Low with input 35
+2020-04-12 21:11:55,409 [13] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Normal, new=Low
+2020-04-12 21:12:37,778 [22] INFO  Photon.Common.LoadBalancer.LoadShedding.FeedbackController - Transit CpuUsage from Low to Lowest with input 20
+2020-04-12 21:12:37,778 [22] INFO  Photon.Common.LoadBalancer.LoadShedding.WorkloadController - FeedbackLevel changed: old=Low, new=Lowest
+2020-04-12 21:18:47,744 [16] INFO  Photon.Hive.Plugin.PluginManager - Plugin successfully created:Type:PhotonUnity.Factory, path:C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 21:18:47,836 [15] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:18:47,837 [15] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:18:47,837 [15] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:19:20,527 [20] INFO  Photon.Hive.Plugin.PluginManager - Plugin successfully created:Type:PhotonUnity.Factory, path:C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 21:19:20,609 [10] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:19:20,610 [10] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:19:20,610 [10] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:19:40,997 [16] INFO  Photon.Hive.Plugin.PluginManager - Plugin successfully created:Type:PhotonUnity.Factory, path:C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Plugins\PhotonUnity\\bin\PhotonUnity.dll
+2020-04-12 21:19:41,072 [15] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:19:41,073 [15] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.
+2020-04-12 21:19:41,073 [15] ERROR Photon.Hive.HiveGame.HiveHostGame.Plugin - MissingCallProcessing for type:Photon.Hive.Plugin.RaiseEventCallInfo in Plugin:'Name:PhotonUnity, Version:1.0 AppId:4302-7E7E-7A5C-4407-5F86-9098, AppVersion:'.

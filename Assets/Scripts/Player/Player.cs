@@ -68,14 +68,20 @@ public class Player : Tank
     public override void DestroyHandle()
     {
         Controller controller = FindObjectOfType<Controller>();
+        if (controller == null) return;
+
         if (GameManager.Instance.gamemode == GameMode.SINGLE)
         {
             controller.ActiveDefeat();
         }
         else
         {
-            if(controller.target.gameObject == gameObject)
+            if(controller.target.gameObject && controller.target.gameObject == gameObject)
                 controller.ActiveDefeat();
+            else
+            {
+
+            }
         }
     }
 }
