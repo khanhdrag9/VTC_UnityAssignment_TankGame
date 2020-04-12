@@ -1,0 +1,59 @@
+﻿2020-04-12 08:56:07,957 [1] INFO  Photon.LoadBalancing.MasterServer.MasterApplication - TokenCreator intialized with an expiration of 02:46:40
+2020-04-12 08:56:08,141 [1] INFO  Photon.SocketServer.Diagnostics.HttpQueuePerformanceCounters - HTTP Queue performance counters successfully initialized
+2020-04-12 08:56:08,142 [1] INFO  Photon.SocketServer.Diagnostics.HttpQueuePerformanceCounters - Internal HTTP Queue performance counters successfully created
+2020-04-12 08:56:08,142 [1] INFO  Photon.Common.Authentication.Diagnostic.CustomAuthResultCounters - Start to initialize Photon: Custom Authentication Results performance counters
+2020-04-12 08:56:08,143 [1] INFO  Photon.Common.Authentication.Diagnostic.CustomAuthResultCounters - Photon: Custom Authentication Results performance counters successfully initialized
+2020-04-12 08:56:08,152 [1] WARN  Photon.Common.LoadBalancer.LoadBalancer`1 - Could not initialize LoadBalancer from configuration: Invalid configuration file C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\LoadBalancer.config. Using default settings... (Could not find file 'C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\LoadBalancer.config'.)
+2020-04-12 08:56:08,170 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - TokenCreator intialized with an expiration of 02:46:40
+2020-04-12 08:56:08,174 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - Plugin configured: name=WebHooksPlugin1.2
+2020-04-12 08:56:08,174 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: BaseUrl=http://photon-photon-pluginsdk-v1.webscript.io
+2020-04-12 08:56:08,174 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: IsPersistent=true
+2020-04-12 08:56:08,174 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: HasErrorInfo=true
+2020-04-12 08:56:08,174 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathClose=GameClose
+2020-04-12 08:56:08,174 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathCreate=GameCreate
+2020-04-12 08:56:08,174 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathEvent=GameEvent
+2020-04-12 08:56:08,175 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathGameProperties=GameProperties
+2020-04-12 08:56:08,175 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathJoin=GameJoin
+2020-04-12 08:56:08,175 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathLeave=GameLeave
+2020-04-12 08:56:08,175 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathLoad=GameCreate
+2020-04-12 08:56:08,186 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - Application {Default}/{Default} starts without Redis
+2020-04-12 08:56:08,520 [1] INFO  Photon.LoadBalancing.Common.NodesReader - Import nodes
+2020-04-12 08:56:08,520 [1] WARN  Photon.LoadBalancing.Common.NodesReader - C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Nodes.txt does not exist, CurrentNodeId = 0
+2020-04-12 08:56:08,520 [1] INFO  Photon.LoadBalancing.Common.NodesReader - Watching C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Nodes.txt
+2020-04-12 08:56:08,521 [1] INFO  Photon.LoadBalancing.MasterServer.MasterApplication - Current Node (nodeId=0) is the active master (leader)
+2020-04-12 08:56:08,521 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=Master; AppPath=C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\LoadBalancing\Master, Type=Photon.LoadBalancing.MasterServer.MasterApplication 
+2020-04-12 08:56:08,536 [1] INFO  Photon.SocketServer.Diagnostics.CounterPublisher - CounterPublisher started publishing ExitGames.Diagnostics.Monitoring.CounterSamplePublisher to ExitGames.Diagnostics.Monitoring.CounterSampleSender
+2020-04-12 08:56:08,552 [12] INFO  Photon.LoadBalancing.MasterServer.GameServer.IncomingGameServerPeer - game server connection from 127.0.0.1:62118 established (id=2)
+2020-04-12 08:56:08,592 [13] WARN  Photon.LoadBalancing.Common.NodesReader - Internal address for node 0 unknown; using loop back
+2020-04-12 08:56:08,592 [13] INFO  Photon.LoadBalancing.Common.NodesReader - Node added: 0 = 127.0.0.1
+2020-04-12 09:11:30,923 [22] INFO  Photon.LoadBalancing.MasterServer.GameServer.IncomingGameServerPeer - OnDisconnect: game server connection closed (connectionId=2, serverId=16e336f5-b8c5-461a-89be-0145d7ea1b81, reason=ClientDisconnect)
+2020-04-12 09:11:30,923 [1] INFO  Photon.SocketServer.ApplicationBase - Application is stopping: AppId=Master
+2020-04-12 09:11:30,929 [1] INFO  Photon.SocketServer.ApplicationBase - Application stop: AppId=Master
+2020-04-12 09:11:37,212 [1] INFO  Photon.LoadBalancing.MasterServer.MasterApplication - TokenCreator intialized with an expiration of 02:46:40
+2020-04-12 09:11:37,401 [1] INFO  Photon.SocketServer.Diagnostics.HttpQueuePerformanceCounters - HTTP Queue performance counters successfully initialized
+2020-04-12 09:11:37,401 [1] INFO  Photon.SocketServer.Diagnostics.HttpQueuePerformanceCounters - Internal HTTP Queue performance counters successfully created
+2020-04-12 09:11:37,402 [1] INFO  Photon.Common.Authentication.Diagnostic.CustomAuthResultCounters - Start to initialize Photon: Custom Authentication Results performance counters
+2020-04-12 09:11:37,403 [1] INFO  Photon.Common.Authentication.Diagnostic.CustomAuthResultCounters - Photon: Custom Authentication Results performance counters successfully initialized
+2020-04-12 09:11:37,407 [1] WARN  Photon.Common.LoadBalancer.LoadBalancer`1 - Could not initialize LoadBalancer from configuration: Invalid configuration file C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\LoadBalancer.config. Using default settings... (Could not find file 'C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\LoadBalancer.config'.)
+2020-04-12 09:11:37,426 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - TokenCreator intialized with an expiration of 02:46:40
+2020-04-12 09:11:37,430 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - Plugin configured: name=WebHooksPlugin1.2
+2020-04-12 09:11:37,430 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: BaseUrl=http://photon-photon-pluginsdk-v1.webscript.io
+2020-04-12 09:11:37,431 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: IsPersistent=true
+2020-04-12 09:11:37,431 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: HasErrorInfo=true
+2020-04-12 09:11:37,431 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathClose=GameClose
+2020-04-12 09:11:37,431 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathCreate=GameCreate
+2020-04-12 09:11:37,431 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathEvent=GameEvent
+2020-04-12 09:11:37,431 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathGameProperties=GameProperties
+2020-04-12 09:11:37,432 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathJoin=GameJoin
+2020-04-12 09:11:37,432 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathLeave=GameLeave
+2020-04-12 09:11:37,432 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - 	Attribute: PathLoad=GameCreate
+2020-04-12 09:11:37,444 [1] INFO  Photon.LoadBalancing.MasterServer.GameApplication - Application {Default}/{Default} starts without Redis
+2020-04-12 09:11:37,772 [1] INFO  Photon.LoadBalancing.Common.NodesReader - Import nodes
+2020-04-12 09:11:37,773 [1] WARN  Photon.LoadBalancing.Common.NodesReader - C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Nodes.txt does not exist, CurrentNodeId = 0
+2020-04-12 09:11:37,773 [1] INFO  Photon.LoadBalancing.Common.NodesReader - Watching C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\Nodes.txt
+2020-04-12 09:11:37,773 [1] INFO  Photon.LoadBalancing.MasterServer.MasterApplication - Current Node (nodeId=0) is the active master (leader)
+2020-04-12 09:11:37,773 [1] INFO  Photon.SocketServer.ApplicationBase - Application start: AppId=Master; AppPath=C:\Projects\ArcherTank\Server\Photon-OnPremise-Server-Plugin-SDK_v4-0-29-11263\deploy\LoadBalancing\Master, Type=Photon.LoadBalancing.MasterServer.MasterApplication 
+2020-04-12 09:11:37,790 [1] INFO  Photon.SocketServer.Diagnostics.CounterPublisher - CounterPublisher started publishing ExitGames.Diagnostics.Monitoring.CounterSamplePublisher to ExitGames.Diagnostics.Monitoring.CounterSampleSender
+2020-04-12 09:11:37,805 [13] INFO  Photon.LoadBalancing.MasterServer.GameServer.IncomingGameServerPeer - game server connection from 127.0.0.1:62203 established (id=2)
+2020-04-12 09:11:37,849 [11] WARN  Photon.LoadBalancing.Common.NodesReader - Internal address for node 0 unknown; using loop back
+2020-04-12 09:11:37,849 [11] INFO  Photon.LoadBalancing.Common.NodesReader - Node added: 0 = 127.0.0.1

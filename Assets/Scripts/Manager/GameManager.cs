@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public enum GameMode
 {
-    SINGLE, MULTI
+    SINGLE, MULTI, LAN
 }
 
 public class GameManager : Singleton<GameManager>

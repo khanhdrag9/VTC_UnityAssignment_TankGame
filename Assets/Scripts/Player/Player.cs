@@ -17,7 +17,9 @@ public class Player : Tank
     {
         base.ReUpdateComponents();
         controlAbleObject = GetComponent<ControlAbleObject>();
-        photonView = GetComponent<PhotonView>();
+
+        if(GameManager.Instance.gamemode != GameMode.SINGLE)
+            photonView = GetComponent<PhotonView>();
     }
 
     protected override void UpdateMine()
@@ -27,7 +29,7 @@ public class Player : Tank
         barrelRotation?.Handle(controlAbleObject.mouseDirect, 1);
         if (shootObject.canShoot && (Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)))
         {
-            if (GameManager.Instance.gamemode == GameMode.MULTI)
+            if (GameManager.Instance.gamemode != GameMode.SINGLE)
                 photonView.RPC("Shoot", RpcTarget.All);
             else
                 Shoot();
@@ -44,7 +46,10 @@ public class Player : Tank
     [PunRPC]
     public void SetName(string name)
     {
-        var o = Instantiate(nameDisplayPrefab, transform.position + offsetName, Quaternion.identity);
+        TextMesh o = GameManager.Instance.gamemode == GameMode.SINGLE ?
+            Instantiate(nameDisplayPrefab, transform.position + offsetName, Quaternion.identity) :
+            PhotonNetwork.Instantiate("Player/PlayerName", transform.position + offsetName, Quaternion.identity).GetComponent<TextMesh>();
+
         nameDisplayer = o.transform;
         o.GetComponent<Renderer>().sortingLayerName = "Objects";
         o.text = name;
@@ -63,7 +68,7 @@ public class Player : Tank
         if (nameDisplayer)
             Destroy(nameDisplayer.gameObject);
 
-        if (GameManager.Instance.gamemode == GameMode.MULTI && !photonView.IsMine)
+        if (GameManager.Instance.gamemode != GameMode.SINGLE && !photonView.IsMine)
         {
             
         }

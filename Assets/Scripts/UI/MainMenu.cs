@@ -24,6 +24,10 @@ public class MainMenu : MonoBehaviour
     {
         GameManager.Instance.gamemode = GameMode.MULTI;
     }
+    public void EnterLAN()
+    {
+        GameManager.Instance.gamemode = GameMode.LAN;
+    }
 
     public void SelectStage(int index)
     {

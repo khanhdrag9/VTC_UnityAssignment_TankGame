@@ -14,7 +14,7 @@ public class Defeat : MonoBehaviour
 
     public void Menu()
     {
-        if(GameManager.Instance.gamemode == GameMode.MULTI)
+        if(GameManager.Instance.gamemode != GameMode.SINGLE)
         {
             //PhotonNetwork.LeaveRoom();
             //PhotonNetwork.LeaveLobby();

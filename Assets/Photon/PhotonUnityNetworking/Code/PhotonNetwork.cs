@@ -123,7 +123,8 @@ namespace Photon.Pun
 
                 return photonServerSettings;
             }
-            private set { photonServerSettings = value; }
+            set { photonServerSettings = value; }
+            //private set { photonServerSettings = value; }
         }
 
         /// <summary>Currently used server address (no matter if master or game server).</summary>

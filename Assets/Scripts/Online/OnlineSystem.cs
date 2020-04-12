@@ -6,11 +6,12 @@ using Photon.Pun;
 
 public class OnlineSystem : MonoBehaviourPunCallbacks
 {
+
     public string playerName { get; set; }
-
     private const string gameversion = "1";
-
     public System.Action<bool> OnConnectResult;
+    public ServerSettings cloudSetting;
+    public ServerSettings serverSetting;
 
     public static OnlineSystem Instance { get; private set; }
 
@@ -24,6 +25,8 @@ public class OnlineSystem : MonoBehaviourPunCallbacks
 
         Instance = this;
         PhotonNetwork.AutomaticallySyncScene = false;
+        PhotonNetwork.SendRate = 80;
+        PhotonNetwork.SerializationRate = 60;
     }
 
     public void Find()
@@ -39,8 +42,9 @@ public class OnlineSystem : MonoBehaviourPunCallbacks
         }
         else
         {
-            PhotonNetwork.ConnectUsingSettings();
+            PhotonNetwork.PhotonServerSettings = GameManager.Instance.gamemode == GameMode.MULTI ? cloudSetting : serverSetting;
             PhotonNetwork.GameVersion = gameversion;
+            PhotonNetwork.ConnectUsingSettings();
         }
     }
 

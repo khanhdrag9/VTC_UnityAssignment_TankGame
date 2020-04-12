@@ -31,6 +31,7 @@ public class LiveObject : MonoBehaviour, IPunObservable
 
             if (hp <= 0) Die();
 
+            
         }
     }
 
@@ -54,11 +55,15 @@ public class LiveObject : MonoBehaviour, IPunObservable
         Destroy(hpBar.gameObject);
     }
 
+    //private float old;
     void IPunObservable.OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
     {
+        //if (old != 0f)
+        //    Debug.Log("Serialize Time : " + (Time.time - old) + " ms");
+        //old = Time.time;
         if (photonView == null) return;
 
-        if (photonView.IsMine)
+        if (stream.IsWriting)
         {
             stream.SendNext(HP);
         }
