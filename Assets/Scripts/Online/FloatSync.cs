@@ -3,6 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class TextSync : Sync<string>
+public class FloatSync : Sync<float>
 { 
 }

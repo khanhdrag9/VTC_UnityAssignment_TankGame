@@ -10,6 +10,7 @@ public class Player : Tank
 
     private ControlAbleObject controlAbleObject;
     private PhotonView photonView;
+    private OpacityChanger opacityChanger;
 
     public Transform nameDisplayer;
 
@@ -18,6 +19,7 @@ public class Player : Tank
     {
         base.ReUpdateComponents();
         controlAbleObject = GetComponent<ControlAbleObject>();
+        opacityChanger = GetComponent<OpacityChanger>();
 
         if(GameManager.Instance.gamemode != GameMode.SINGLE)
             photonView = GetComponent<PhotonView>();
@@ -52,9 +54,10 @@ public class Player : Tank
             PhotonNetwork.Instantiate("Player/PlayerName", transform.position + offsetName, Quaternion.identity).GetComponent<TextMesh>();
 
         nameDisplayer = o.transform;
-        o.GetComponent<Renderer>().sortingLayerName = "Objects";
         o.text = nameDisplay;
         o.GetComponent<TextSync>().value = nameDisplay;
+
+        opacityChanger.textMeshes.Add(o);
     }
 
     protected override void FixedUpdateMine()
@@ -70,7 +73,7 @@ public class Player : Tank
     public override void DestroyHandle()
     {
         Controller controller = FindObjectOfType<Controller>();
-        if (controller == null) return;
+        if (controller == null || controller.gameObject == null) return;
 
         if (GameManager.Instance.gamemode == GameMode.SINGLE)
         {

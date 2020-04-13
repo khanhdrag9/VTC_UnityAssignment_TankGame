@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class OpacityChanger : MonoBehaviour
 {
-    private SpriteRenderer[] sprites;
+    public List<SpriteRenderer> sprites = new List<SpriteRenderer>();
+    public List<TextMesh> textMeshes = new List<TextMesh>();
     public bool visible { get; protected set; }
 
     void Start()
     {
-        sprites = GetComponentsInChildren<SpriteRenderer>();
+        var p = GetComponentsInChildren<SpriteRenderer>();
+        foreach (var e in p) sprites.Add(e);
         visible = true;
     }
 
     public void SetAlpha(float value)
     {
-        foreach (var sprite in sprites)
-            sprite.color = sprite.color.SetAlpha(value);
+        foreach (var e in sprites)
+            e.color = e.color.SetAlpha(value);
+        foreach (var e in textMeshes)
+            e.color = e.color.SetAlpha(value < 1 ? 0 : 1);
         visible = value > 0.3f;
     }
 }

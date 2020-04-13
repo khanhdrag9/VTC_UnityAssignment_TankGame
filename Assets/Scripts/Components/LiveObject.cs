@@ -9,7 +9,7 @@ public class LiveObject : MonoBehaviour, IPunObservable
     [SerializeField] Vector2 offsetHPbar;
     [SerializeField] HPBar prefab;
 
-    private HPBar hpBar;
+    public HPBar hpBar { get; private set; }
     private int hp;
     public int HP
     {
@@ -42,6 +42,13 @@ public class LiveObject : MonoBehaviour, IPunObservable
         photonView = GetComponent<PhotonView>();
         hpBar = Instantiate(prefab);
         hpBar.transform.position = (Vector2)transform.position + offsetHPbar;
+
+        OpacityChanger opacityChanger = GetComponent<OpacityChanger>();
+        if(opacityChanger)
+        {
+            var p = hpBar.GetComponentsInChildren<SpriteRenderer>();
+            foreach (var e in p) opacityChanger.sprites.Add(e);
+        }
     }
 
     private void Update()
