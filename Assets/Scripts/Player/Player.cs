@@ -81,7 +81,7 @@ public class Player : Tank
         }
         else
         {
-            if(controller.target.gameObject && controller.target.gameObject == gameObject)
+            if(controller.target && controller.target.gameObject && controller.target.gameObject == gameObject)
                 controller.ActiveDefeat();
             else
             {
