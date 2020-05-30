@@ -38,6 +38,7 @@ public class OnlineSystem : MonoBehaviourPunCallbacks, IOnEventCallback
         PhotonNetwork.AddCallbackTarget(this);
         //PhotonNetwork.SendRate = 300;
         //PhotonNetwork.SerializationRate = 150;
+
     }
 
     public void Find()
